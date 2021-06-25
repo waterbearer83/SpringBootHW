@@ -8,14 +8,19 @@
     <version>2.5.1</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
+  
   <groupId>com.promineotech</groupId>
   <artifactId>jeep-sales</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
   <name>jeep-sales</name>
   <description>Jeep Sales</description>
+  
   <properties>
     <java.version>11</java.version>
   </properties>
+  
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -28,21 +33,43 @@
       <scope>runtime</scope>
       <optional>true</optional>
     </dependency>
+    
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
+    
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    
     <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
     <dependency>
 	   <groupId>org.springdoc</groupId>
 	   <artifactId>springdoc-openapi-ui</artifactId>
 	   <version>1.5.9</version>
+    </dependency>
+    
+    <!-- Database Dependancies ================================================-->
+  
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jdbc</artifactId>
+      </dependency>
+    
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      </dependency>
+      
+      <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+     <scope>test</scope>
     </dependency>
   </dependencies>
 
