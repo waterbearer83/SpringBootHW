@@ -35,7 +35,9 @@ class FetchJeepTest extends FetchJeepTestSupport {
     
     assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     
+    List<Jeep> actual = response.getBody();
     List<Jeep> expected = buildExpected();
-    assertThat(response.getBody()).isEqualTo(expected);
+  
+    assertThat(actual).isEqualTo(expected);
   }
 }

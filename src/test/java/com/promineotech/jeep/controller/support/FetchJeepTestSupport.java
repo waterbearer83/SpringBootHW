@@ -1,6 +1,7 @@
 package com.promineotech.jeep.controller.support;
 
 import java.math.BigDecimal;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import com.promineotech.jeep.entity.Jeep;
@@ -23,6 +24,8 @@ public class FetchJeepTestSupport extends BaseTest{
         .wheelSize(17)
         .basePrice(new BigDecimal("31975.00"))
         .build());
+    
+    Collections.sort(list);
     return list;
   }
 
